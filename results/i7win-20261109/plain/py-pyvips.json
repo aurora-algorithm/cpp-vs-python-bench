@@ -1,0 +1,153 @@
+{
+  "schema_version": 2,
+  "metadata": {
+    "hyperfine_version": "2.0.0",
+    "start_time": "2026-11-10T05:53:40Z",
+    "platform": {
+      "os": "Windows_NT",
+      "architecture": "x86_64"
+    }
+  },
+  "primary_metric": "time_wall_clock",
+  "results": [
+    {
+      "command": "venv/Scripts/python.exe py/thumbs_pyvips.py data/photos results/i7win-20261109/plain/py-pyvips.out",
+      "name": "Python pyvips",
+      "measurements": [
+        {
+          "time_wall_clock": {
+            "value": 4.5010268,
+            "unit": "second"
+          },
+          "time_cpu": {
+            "value": 4.421875,
+            "unit": "second"
+          },
+          "time_user": {
+            "value": 4.015625,
+            "unit": "second"
+          },
+          "time_system": {
+            "value": 0.40625,
+            "unit": "second"
+          },
+          "exit_code": 0
+        },
+        {
+          "time_wall_clock": {
+            "value": 4.5142261,
+            "unit": "second"
+          },
+          "time_cpu": {
+            "value": 4.343750000000001,
+            "unit": "second"
+          },
+          "time_user": {
+            "value": 3.8906250000000004,
+            "unit": "second"
+          },
+          "time_system": {
+            "value": 0.45312500000000006,
+            "unit": "second"
+          },
+          "exit_code": 0
+        },
+        {
+          "time_wall_clock": {
+            "value": 4.4882631,
+            "unit": "second"
+          },
+          "time_cpu": {
+            "value": 4.390625,
+            "unit": "second"
+          },
+          "time_user": {
+            "value": 3.8281250000000004,
+            "unit": "second"
+          },
+          "time_system": {
+            "value": 0.5625,
+            "unit": "second"
+          },
+          "exit_code": 0
+        },
+        {
+          "time_wall_clock": {
+            "value": 4.4953971,
+            "unit": "second"
+          },
+          "time_cpu": {
+            "value": 4.359375,
+            "unit": "second"
+          },
+          "time_user": {
+            "value": 3.8437500000000004,
+            "unit": "second"
+          },
+          "time_system": {
+            "value": 0.515625,
+            "unit": "second"
+          },
+          "exit_code": 0
+        },
+        {
+          "time_wall_clock": {
+            "value": 4.527989,
+            "unit": "second"
+          },
+          "time_cpu": {
+            "value": 4.46875,
+            "unit": "second"
+          },
+          "time_user": {
+            "value": 3.8593750000000004,
+            "unit": "second"
+          },
+          "time_system": {
+            "value": 0.609375,
+            "unit": "second"
+          },
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "time_cpu": {
+          "unit": "second",
+          "count": 5,
+          "mean": 4.396875,
+          "stddev": 0.050146270424628554,
+          "median": 4.390625,
+          "min": 4.343750000000001,
+          "max": 4.46875
+        },
+        "time_system": {
+          "unit": "second",
+          "count": 5,
+          "mean": 0.509375,
+          "stddev": 0.08163969048508206,
+          "median": 0.515625,
+          "min": 0.40625,
+          "max": 0.609375
+        },
+        "time_user": {
+          "unit": "second",
+          "count": 5,
+          "mean": 3.8875,
+          "stddev": 0.07525996611745166,
+          "median": 3.8593750000000004,
+          "min": 3.8281250000000004,
+          "max": 4.015625
+        },
+        "time_wall_clock": {
+          "unit": "second",
+          "count": 5,
+          "mean": 4.50538042,
+          "stddev": 0.015819428510442386,
+          "median": 4.5010268,
+          "min": 4.4882631,
+          "max": 4.527989
+        }
+      }
+    }
+  ]
+}

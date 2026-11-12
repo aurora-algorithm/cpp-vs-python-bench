@@ -1,0 +1,98 @@
+{
+ "session": "i7win-20261109",
+ "cells": {
+  "cpp-loop": {
+   "label": "C++ loop",
+   "test": 1,
+   "median_s": 0.0327,
+   "min_s": 0.0309,
+   "max_s": 0.0375,
+   "runs": 50,
+   "plain_median_s": 0.0328,
+   "plain_vs_recorded": 0.0058,
+   "busy_after": []
+  },
+  "py-loop": {
+   "label": "Python loop",
+   "test": 1,
+   "median_s": 2.1929,
+   "min_s": 2.1593,
+   "max_s": 2.3138,
+   "runs": 50,
+   "plain_median_s": 2.1918,
+   "plain_vs_recorded": -0.0005,
+   "busy_after": []
+  },
+  "py-numpy": {
+   "label": "Python NumPy",
+   "test": 1,
+   "median_s": 0.2994,
+   "min_s": 0.2922,
+   "max_s": 0.3358,
+   "runs": 50,
+   "plain_median_s": 0.3033,
+   "plain_vs_recorded": 0.0131,
+   "busy_after": []
+  },
+  "cpp-opencv": {
+   "label": "C++ OpenCV",
+   "test": 2,
+   "median_s": 8.4494,
+   "min_s": 8.4031,
+   "max_s": 8.5393,
+   "runs": 25,
+   "plain_median_s": 8.4607,
+   "plain_vs_recorded": 0.0013,
+   "busy_after": []
+  },
+  "cpp-libvips": {
+   "label": "C++ libvips",
+   "test": 2,
+   "median_s": 4.4742,
+   "min_s": 4.4323,
+   "max_s": 4.5423,
+   "runs": 25,
+   "plain_median_s": 4.461,
+   "plain_vs_recorded": -0.003,
+   "busy_after": []
+  },
+  "py-pillow": {
+   "label": "Python Pillow",
+   "test": 2,
+   "median_s": 6.096,
+   "min_s": 6.0019,
+   "max_s": 6.1671,
+   "runs": 25,
+   "plain_median_s": 6.1099,
+   "plain_vs_recorded": 0.0023,
+   "busy_after": []
+  },
+  "py-pyvips": {
+   "label": "Python pyvips",
+   "test": 2,
+   "median_s": 4.5043,
+   "min_s": 4.4829,
+   "max_s": 4.555,
+   "runs": 25,
+   "plain_median_s": 4.501,
+   "plain_vs_recorded": -0.0007,
+   "busy_after": []
+  }
+ },
+ "stages_s": {
+  "py-pillow": {
+   "decode": 2.208,
+   "resize": 1.207,
+   "encode": 2.626,
+   "other": 0.19,
+   "wall": 6.24
+  },
+  "cpp-opencv": {
+   "decode": 5.547,
+   "resize": 1.514,
+   "encode": 1.559,
+   "other": 0.174,
+   "wall": 8.799
+  }
+ }
+}

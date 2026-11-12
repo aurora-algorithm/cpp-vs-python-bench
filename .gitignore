@@ -1,0 +1,14 @@
+data/photos/
+data/fetch.log
+cpp/build/
+tools/opencv/
+tools/vips-dev-*/
+venv/
+__pycache__/
+results/*/round*/*.out/
+results/*/round*/*.stages-out/
+results/*/plain/*.out/
+results/*/round*/*.ppm
+results/*/plain/*.ppm
+results/*/shrink_loop.s
+.DS_Store

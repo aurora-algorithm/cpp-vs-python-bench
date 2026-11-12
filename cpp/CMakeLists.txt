@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.24)
+project(cpp_vs_python CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+# Release = -O3 -DNDEBUG, built for the CPU it runs on.
+set(BENCH_ARCH_FLAGS "-march=native" CACHE STRING "CPU flags for every target")
+# The prebuilt OpenCV (opencv-4.14.0-windows.exe) and libvips (vips-dev-x64-web-8.18.7.zip), unpacked into tools/.
+set(OPENCV_ROOT "${CMAKE_SOURCE_DIR}/../tools/opencv/build" CACHE PATH "")
+set(VIPS_ROOT "${CMAKE_SOURCE_DIR}/../tools/vips-dev-8.18" CACHE PATH "")
+file(GLOB OPENCV_WORLD_LIB "${OPENCV_ROOT}/x64/vc*/lib/opencv_world[0-9]*[0-9].lib")
+list(GET OPENCV_WORLD_LIB -1 OPENCV_WORLD_LIB)
+
+foreach(t shrink_loop thumbs_opencv thumbs_vips opencv_info)
+  add_executable(${t} src/${t}.cpp)
+  target_compile_options(${t} PRIVATE ${BENCH_ARCH_FLAGS})
+endforeach()
+foreach(t thumbs_opencv opencv_info)
+  target_include_directories(${t} PRIVATE "${OPENCV_ROOT}/include")
+  target_link_libraries(${t} PRIVATE "${OPENCV_WORLD_LIB}")
+endforeach()
+target_include_directories(thumbs_vips PRIVATE "${VIPS_ROOT}/include" "${VIPS_ROOT}/include/glib-2.0" "${VIPS_ROOT}/lib/glib-2.0/include")
+target_link_libraries(thumbs_vips PRIVATE "${VIPS_ROOT}/lib/libvips.lib" "${VIPS_ROOT}/lib/libglib-2.0.lib" "${VIPS_ROOT}/lib/libgobject-2.0.lib")

@@ -1,0 +1,30 @@
+{
+ "py-pillow.out": {
+  "files": 100,
+  "same_size": 100,
+  "max_size_diff_px": 0,
+  "psnr_min_db": 99.0,
+  "psnr_median_db": 99.0
+ },
+ "cpp-opencv.out": {
+  "files": 100,
+  "same_size": 100,
+  "max_size_diff_px": 0,
+  "psnr_min_db": 32.06,
+  "psnr_median_db": 35.31
+ },
+ "py-pyvips.out": {
+  "files": 100,
+  "same_size": 95,
+  "max_size_diff_px": 1,
+  "psnr_min_db": 25.44,
+  "psnr_median_db": 35.36
+ },
+ "cpp-libvips.out": {
+  "files": 100,
+  "same_size": 95,
+  "max_size_diff_px": 1,
+  "psnr_min_db": 25.44,
+  "psnr_median_db": 35.36
+ }
+}
